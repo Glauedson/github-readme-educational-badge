@@ -39,8 +39,11 @@ function createPlaceholder(name) {
 
 export function createBadgeHeader(degree) {
   return `
-    <rect x="270" y="0" width="140" height="35" rx="15" ry="15" fill="#D9D9D9"/>
-    <image href="https://cdn-icons-png.flaticon.com/512/43/43298.png" x="285" y="8" width="20" height="20" />
+    <rect x="270" y="0" width="140" height="35" rx="15" ry="15" fill="#D5D5D5"/>
+    <svg x="285" y="8" width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 3L1 9L12 15L21 12.09V17H23V9L12 3Z" fill="#000000ff"/>
+      <path d="M5 13.18V17.18C5 19.45 8.58 21 12 21C15.42 21 19 19.45 19 17.18V13.18L12 15.91L5 13.18Z" fill="#000000ff"/>
+    </svg>
     <text x="320" y="22" font-size="12" font-weight="600" fill="#000000ff">
       ${degree}
     </text>

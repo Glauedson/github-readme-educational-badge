@@ -14,7 +14,7 @@ export function badgeSvg({ name, course, degree, progress, img }) {
       ${getSvgDefs()}
       
       <!-- Background card -->
-      <rect x="0" y="15" width="400" height="145" rx="8" ry="8" fill="#ffffff" filter="url(#shadow)"/>
+      <rect x="0" y="0" width="400" height="160" rx="8" ry="8" fill="#ffffffff" filter="url(#shadow)"/>
       
       <!-- Badge degree -->
       ${createBadgeHeader(degree)}
