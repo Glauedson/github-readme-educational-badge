@@ -4,12 +4,10 @@ import { startCacheCleanup } from "./utils/image.utils.js";
 
 const app = express();
 
+// Start image cache cleanup
 startCacheCleanup();
 
-app.get("/", (req, res) => {
-  res.send("Academic Badge API is running! 🎓");
-});
-
+// Use badge routes (includes language routing)
 app.use("/", badgeRoutes);
 
 export default app;
