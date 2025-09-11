@@ -31,11 +31,16 @@ Display your **university/college**, **course**, **degree type**, **progress per
 ### Response Examples:
 
 **English:**
+<div align=center>
+
 ![badge](https://github-readme-educational-badge.vercel.app/en/badge?name=Harvard%20University&course=Computer%20Science&degree=Master&progress=90%25&img=https://www.designyourway.net/blog/wp-content/uploads/2024/04/harvard-logo.jpg)
+</div>
 
 **Portuguese:**
+<div align=center>
+  
 ![badge](https://github-readme-educational-badge.vercel.app/pt/badge?name=Harvard%20University&course=Ciência%20da%20Computação&degree=Mestrado&progress=90%25&img=https://www.designyourway.net/blog/wp-content/uploads/2024/04/harvard-logo.jpg)
-
+</div>
 </div>
 
 3. Star the repo :)
@@ -96,7 +101,7 @@ We welcome contributions for new language translations! Currently supported:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/github-readme-educational-badge.git
+git clone https://github.com/Glauedson/github-readme-educational-badge.git
 
 # Install dependencies
 npm install
