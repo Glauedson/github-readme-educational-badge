@@ -1,35 +1,34 @@
-export function validateBadgeParams({ name, course, degree, progress }) {
+import { getTranslation, getDefaultLanguage } from './i18n.utils.js';
+
+export function validateBadgeParams({ name, course, degree, progress }, language = getDefaultLanguage()) {
   const errors = [];
 
   if (!name?.trim()) {
-    errors.push('name is required');
+    errors.push(getTranslation(language, 'errors.nameRequired'));
   }
-
   if (!course?.trim()) {
-    errors.push('course is required');
+    errors.push(getTranslation(language, 'errors.courseRequired'));
   }
-
   if (!degree?.trim()) {
-    errors.push('degree is required');
+    errors.push(getTranslation(language, 'errors.degreeRequired'));
   }
-
   if (!progress) {
-    errors.push('progress is required');
+    errors.push(getTranslation(language, 'errors.progressRequired'));
   }
-
+  
   return errors;
 }
 
-export function validateProgress(progress) {
+export function validateProgress(progress, language = getDefaultLanguage()) {
   const progressNum = parseInt(progress);
   
   if (isNaN(progressNum) || progressNum < 0 || progressNum > 100) {
     return {
       isValid: false,
-      error: 'Progress must be a number between 0 and 100'
+      error: getTranslation(language, 'errors.invalidProgress')
     };
   }
-
+  
   return {
     isValid: true,
     value: progressNum
@@ -39,7 +38,7 @@ export function validateProgress(progress) {
 export function sanitizeText(text, maxLength = 25) {
   if (!text) return '';
   const cleaned = text.trim();
-  return cleaned.length > maxLength 
-    ? cleaned.substring(0, maxLength) + '...' 
+  return cleaned.length > maxLength
+    ? cleaned.substring(0, maxLength) + '...'
     : cleaned;
 }
